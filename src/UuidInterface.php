@@ -13,6 +13,7 @@ interface UuidInterface
      * @const string
      */
     const GENERATE = 'uuid.generate';
+    const FACTORY = 'uuid.factory';
 
     /**
      * Generate UUID
@@ -20,4 +21,6 @@ interface UuidInterface
      * @return string
      */
     public function generate();
+
+    public function getFactory();
 }

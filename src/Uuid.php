@@ -1,6 +1,5 @@
 <?php
 
-
 namespace SilexFriends\Uuid;
 
 use Ramsey\Uuid\Uuid as UuidGenerator;
@@ -28,6 +27,12 @@ class Uuid implements UuidInterface, ServiceProviderInterface
                 return $service->generate();
             }
         );
+
+        $app[static::FACTORY] = $app->protect(
+            function () use ($service) {
+                return $service->getFactory();
+            }
+        );
     }
 
     /**
@@ -46,5 +51,10 @@ class Uuid implements UuidInterface, ServiceProviderInterface
     public function generate()
     {
         return UuidGenerator::uuid4()->toString();
+    }
+
+    public function getFactory()
+    {
+        return UuidGenerator::getFactory();
     }
 }
