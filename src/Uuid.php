@@ -1,5 +1,6 @@
 <?php
 
+
 namespace SilexFriends\Uuid;
 
 use Ramsey\Uuid\Uuid as UuidGenerator;
