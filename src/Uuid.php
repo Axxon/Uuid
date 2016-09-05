@@ -28,11 +28,11 @@ class Uuid implements UuidInterface, ServiceProviderInterface
             }
         );
 
-        $app[static::FACTORY] = $app->protect(
-            function () use ($service) {
-                return $service->getFactory();
-            }
-        );
+		$app[static::FACTORY] = $app->protect(
+			function () use ($service) {
+				return $service->getFactory();
+			}
+		);
     }
 
     /**
