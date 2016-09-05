@@ -1,5 +1,4 @@
 <?php
-declare(strict_types = 1);
 
 namespace SilexFriends\Uuid;
 
@@ -20,5 +19,5 @@ interface UuidInterface
      *
      * @return string
      */
-    public function generate(): string;
+    public function generate();
 }

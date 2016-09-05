@@ -1,5 +1,5 @@
 {
-  "name" : "silexfriends/uuid",
+  "name" : "axxon/uuid",
   "description" : "Silex Uuid Provider",
   "license" : "MIT",
   "type": "library",
@@ -22,7 +22,7 @@
     }
   ],
   "require": {
-    "php": ">=7.0",
+    "php": "~5.6",
     "ramsey/uuid": "^3.0"
   },
   "require-dev": {
